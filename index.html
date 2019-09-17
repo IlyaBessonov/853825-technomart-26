@@ -8,60 +8,72 @@
 
 <body>
   <header>
-    <a>
-      <img src="img/logo.png" width="115" height="25" alt="Логотип магазина техномарт">
-    </a>
-    <p>
-      Поиск:
-      <input type="text" />
-    </p>
-    <p>Закладки: <span>0</span></p>
-    <p>Корзина: <span>0</span></p>
-    <a href="">Оформить заказ</a>
-    <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>>
-    <p>
-      <span>+7 (812) 555-05-55</span>
-      <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-    </p>
-    <div class="visually-hidden">
-        <ul>
-            <li>
-                <a href="">Войти</a></button>
-            </li>
-            <li>
-                <a href="">Регистрация</a></button>
-            </li>
-        </ul>
+    <div class="header-top">
+      <a class="header-logo">
+        <img src="img/logo.png" width="115" height="25" alt="Логотип магазина техномарт">
+      </a>
+      /**
+      <p class="header-search-form">
+        <b>Поиск:</b>
+        <input type="text" />
+      </p>
+      **/
+      <p class="header-bookmarks">
+        <b>Закладки:</b>
+        <span>0</span>
+      </p>
+      <p class="header-basket">
+        <b>Корзина:</b>
+        <span>0</span></p>
+      <a href="">Оформить заказ</a>
     </div>
-    <div class="visually-hidden">
-        <ul>
-            <li>
-                <a href="" aria-label="Профиль пользователя">
-                </a>
-            </li>
-            <li>
-                <a href="" aria-label="Выйти">Выйти</a>
-            </li>
-            <li>
-                <a href="">Мои заказы</a></button>
-            </li>
-            <li>
-                <a href="">Личный кабинет</a></button>
-            </li>
+    <div class="header-middle">
+      <p class="header-page-title">Интернет-магазин строительных материалов и инструментов для ремонта</p>>
+      <p class="header-contacts">
+        <span>+7 (812) 555-05-55</span>
+        <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+      </p>
+      <div class="user-navigation user-navigation-no-auth">
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="user-navigation-button" href="">Войти</a>
+          </li>
+          <li class="user-navigation-list">
+            <a class="user-navigation-button" href="">Регистрация</a>
+          </li>
         </ul>
-    </div>  
-    <nav>
-      <ul>
-        <li><a>Главная</a></li>
-        <li><a href="">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="">Новости</a></li>
-        <li><a href="">Спецпредложения</a></li>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Контакты</a></li>
-      </ul>
-    </nav>
-
+      </div>
+      <div class="visually-hidden user-navigation user-navigation-auth">
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="user-navigation-button user-navigation-profile" href="" aria-label="Профиль пользователя">
+            </a>
+          </li>
+          <li>
+            <a class="user-navigation-button user-navigation-logout" href="" aria-label="Выйти">Выйти</a>
+          </li>
+          <li>
+            <a class="user-navigation-userorders" href="">Мои заказы</a></button>
+          </li>
+          <li>
+            <a class="user-navigation-user" href="">Личный кабинет</a></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li class="site-navigation-item"><a>Главная</a></li>
+          <li class="site-navigation-item"><a href="">Компания</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
+          <li class="site-navigation-item"><a href="">Новости</a></li>
+          <li class="site-navigation-item"><a href="">Спецпредложения</a></li>
+          <li class="site-navigation-item"><a href="">Доставка</a></li>
+          <li class="site-navigation-item"><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
@@ -88,7 +100,7 @@
         </li>
         <li>
           <a href="">
-              <p>Скидка 50%</p>
+            <p>Скидка 50%</p>
             <p>На 350 товаров</p>
           </a>
         </li>
@@ -104,6 +116,14 @@
       <h2 class="visually-hidden">Слайдер каталога</h2>
       <ul>
         <li>
+          <button type="button" aria-label="Первый слайд"></button>
+        </li>
+        <li>
+          <button type="button" aria-label="Второй слайд"></button>
+        </li>
+      </ul>
+      <ul>
+        <li class="visually-hidden">
           <a href="">
             <p>Перфораторы</p>
             <p>Настоящие мужские игрушки</p>
@@ -142,8 +162,8 @@
           </button>
           <div class="visually-hidden">
             <ul>
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
+              <li><a href="">Купить</a></li>
+              <li><a href="">В закладки</a></li>
             </ul>
           </div>
         </li>
@@ -162,8 +182,8 @@
           </button>
           <div class="visually-hidden">
             <ul>
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
+              <li><a href="">Купить</a></li>
+              <li><a href="">В закладки</a></li>
             </ul>
           </div>
         </li>
@@ -182,8 +202,8 @@
           </button>
           <div class="visually-hidden">
             <ul>
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
+              <li><a href="">Купить</a></li>
+              <li><a href="">В закладки</a></li>
             </ul>
           </div>
         </li>
@@ -196,14 +216,14 @@
               <img src="img/perforator-4.jpg" alt="Перфоратор BOSCH BFG 2000" width="218" height="170" />
             </p>
           </button>
-          <p> </p>            
+          <p> </p>
           <button type="button">
             <p>12500 Р.</p>
           </button>
           <div class="visually-hidden">
             <ul>
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
+              <li><a href="">Купить</a></li>
+              <li><a href="">В закладки</a></li>
             </ul>
           </div>
         </li>
@@ -227,6 +247,11 @@
       <h2>Сервисы</h2>
       <p>Хороший Интернет-магазин отличется от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать
         ваши покупки приятными.</p>
+      <ul>
+        <li><button type="button">Доставка</button></li>
+        <li><button type="button">Гарантия</button></li>
+        <li><button type="button">Кредит</button></li>
+      </ul>
       <ul>
         <li>
           <h3>Доставка</h3>
